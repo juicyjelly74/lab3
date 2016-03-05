@@ -4,7 +4,7 @@
 int main(){ 
 	time_t current_time; 
 	time_t t = time(NULL); 
-	struct tm timeStrct = *localtime(&t); 
+	struct tm timeStrct = *localtime(&t); /* Функция localtime() возвращает указатель на структуру tm, полученную из time. Время представ­ляется как локальное время. Значение time обычно получается в результате вызова функции time(). */
 	int year = 1900, month = 1; 
 	printf("Enter birth date and time:\n"); 
 	scanf("%d/%d/%d %d:%d", &timeStrct.tm_mday, &month, &year, &timeStrct.tm_hour, &timeStrct.tm_min); 
